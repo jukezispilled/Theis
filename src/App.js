@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion'; // Import motion from Framer Motion
 import { HorizontalTicker } from "react-infinite-ticker";
 import monkeyImage from './gigi.png'; // Import the monkey image
@@ -8,9 +8,26 @@ import DT from './dextools.svg';
 import './App.css';
 import TweetButton from './TweetButton';
 import Marquee from "react-fast-marquee";
+import theis3 from './theis3.png'; // Import theis3 image
+import theis4 from './theis4.png'; // Import theis4 image
 
 function App() {
   const [copied, setCopied] = useState(false);
+  const [backgroundImage, setBackgroundImage] = useState('');
+
+  useEffect(() => {
+    const handleResize = () => {
+      const newBackgroundImage = window.innerWidth >= 1024 ? theis3 : theis4;
+      setBackgroundImage(newBackgroundImage);
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Initial check
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const handleCopy = () => {
     navigator.clipboard.writeText("EZUFNJMZTBpungQX2czEb9ZyCMjtdzsDGMK4UywDUa1F");
@@ -22,65 +39,40 @@ function App() {
 
   return (
     <div>
-      <div className="bg-black banana-cursor h-[94vh] md:min-h-[97vh] w-screen flex justify-center items-center bg-cover bg-center relative overflow-clip z-10" style={{backgroundImage: `url(${process.env.PUBLIC_URL}/gigi3.png)`}}>
+      <Marquee speed={200}>
+        <div className='h-16 flex items-center text-[20px] lg:text-3xl font-semibold whitespace-nowrap border-y-2 border-black'>
+          Megainfluencer Luke "Belmar" EXPOSED. Read more&nbsp;
+          <a className="text-blue-600 underline" href="">here</a>
+          &nbsp;Megainfluencer Luke "Belmar" EXPOSED. Read more&nbsp;
+          <a className="text-blue-600 underline" href="">here</a>
+          &nbsp;Megainfluencer Luke "Belmar" EXPOSED. Read more&nbsp;
+          <a className="text-blue-600 underline" href="">here</a>
+          &nbsp;
+        </div>
+      </Marquee>
+      <div
+        className="bg-black h-[94vh] md:min-h-[95vh] w-screen flex justify-center items-center bg-cover bg-center relative overflow-clip z-10"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      >
         <div className=''>
           <div className='text-center font-custom font-bold mb-[5%] text-amber-400'>
-            <h1 className='leading-none text-[150px] md:text-[180px] lg:text-[220px] 2xl:text-[260px]'>GIGI</h1>
+            <h1 className='leading-none text-[150px] md:text-[180px] lg:text-[220px] 2xl:text-[260px]'></h1>
           </div>
           <div className='flex justify-center'>
-            <div className='grid content-center z-40'>
+            <div className='absolute bottom-[15%] grid content-center z-40'>
               <a
                 href="https://www.dextools.io/app/en/solana/pair-explorer/7y3KMHA91JEBoQ67P3mEJtVvXLg62FjWR1VDHhEFSX8Z?t=1715720852830"
-                className='font-custom text-4xl md:text-5xl lg:text-6xl bg-amber-400 p-6 rounded-xl border-2 border-black ring-4 ring-amber-600 ring-opacity-80 ring-offset-4 hover:scale-105 transition ease-in-out duration-200'
+                className='font-bold text-4xl md:text-5xl lg:text-6xl bg-red-600 p-6 border-2 border-black hover:scale-105 transition ease-in-out duration-200'
               >
                 BUY NOW
               </a>
               <div className='pt-8 text-center font-custom text-2xl flex justify-center -mt-3'>
-                <a href="https://www.dextools.io/app/en/solana/pair-explorer/7y3KMHA91JEBoQ67P3mEJtVvXLg62FjWR1VDHhEFSX8Z?t=1715720852830" className='p-2 hover:scale-110 transition ease-in-out duration-200'><img src={DT} alt='Xlogo' className='w-12 h-12 rounded-md'></img></a>
-                <a href="https://twitter.com/gigithedoge" className='p-2 hover:scale-110 transition ease-in-out duration-200'><img src={Xlogo} alt='Xlogo' className='w-12 h-12 rounded-md'></img></a>
-                <a href="https://t.me/gigcoinsol" className='p-2 hover:scale-110 transition ease-in-out duration-200'><img src={TG} alt='Tg logo' className='w-12 h-12'></img></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <Marquee speed={90}>
-        <div className='h-16 flex items-center text-[30px] lg:text-5xl font-custom whitespace-nowrap border-y-2 border-black'> $gigi $gigi $gigi $gigi $gigi $gigi $gigi $gigi $gigi $gigi $gigi $gigi $gigi $gigi $gigi $gigi&nbsp;</div>
-      </Marquee>
-      <div className='h-min w-screen flex justify-center bg-amber-400'>
-        <div className='grid w-full'>
-          <div className='pt-[10%] font-custom text-5xl md:text-6xl lg:text-8xl text-center'>
-            Tokenomics
-          </div>
-          <div className='flex justify-center w-full'>
-            <div className='bg-black rounded-xl h-[300px] w-[75%] md:w-[65%] mt-[5%] mb-[5%]'>
-              <div className='w-full h-full flex justify-center items-center text-white font-custom text-4xl md:text-5xl lg:text-6xl'>
-                <div className='grid text-center'>
-                  total supply
-                  <div className="text-center pt-[2%] text-2xl md:text-4xl mx-6">
-                    1,000,000,000 $GIGI
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className='flex justify-center w-full'>
-            <div className='bg-black rounded-xl h-[300px] w-[75%] md:w-[65%] mb-[10%]'>
-              <div className='w-full h-full flex justify-center items-center text-white font-custom text-4xl md:text-5xl lg:text-6xl'>
-                <div className='grid text-center'>
-                  token address
-                  <div className="text-center pt-[2%] text-2xl md:text-4xl break-all mx-12">
-                    EZUFNJMZTBpungQX2czEb9ZyCMjtdzsDGMK4UywDUa1F
-                  </div>
-                  <div className='flex justify-center'>
-                    <button
-                      className="text-xl mt-2 p-2 w-min bg-gray-800 text-white rounded-md hover:bg-gray-600 transition ease-in-out duration-150"
-                      onClick={handleCopy}
-                    >
-                      {copied ? "Copied!" : "Copy"}
-                    </button>
-                  </div>
-                </div>
+                <a href="https://twitter.com/theiscoin" className='p-2 hover:scale-110 transition ease-in-out duration-200'>
+                  <img src={Xlogo} alt='Xlogo' className='w-12 h-12 rounded-md'></img>
+                </a>
+                <a href="https://t.me/theiscoin" className='p-2 hover:scale-110 transition ease-in-out duration-200'>
+                  <img src={TG} alt='Tg logo' className='w-12 h-12'></img>
+                </a>
               </div>
             </div>
           </div>

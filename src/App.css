@@ -42,3 +42,13 @@
       30 0, /* Adjusted width and height */
     auto;
 }
+
+.bg-theis4 {
+  background-image: url('./theis4.png');
+}
+
+@media (min-width: 1024px) {
+  .bg-theis3 {
+    background-image: url('./theis3.png');
+  }
+}
