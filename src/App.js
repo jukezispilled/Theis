@@ -42,11 +42,11 @@ function App() {
       <Marquee speed={150}>
         <div className='h-16 flex items-center text-[20px] lg:text-4xl font-semibold whitespace-nowrap border-y-2 border-black'>
           Megainfluencer Luke "Belmar" EXPOSED. Read more&nbsp;
-          <a className="text-blue-600 underline" href="https://pump.fun/BcYHgdDMZ2txWf3EJSZ3dWuLSuFwEQ9PtMW6SLnLCVwB">here</a>.
+          <a className="text-blue-600 underline" href="">here</a>.
           &nbsp;Megainfluencer Luke "Belmar" EXPOSED. Read more&nbsp;
-          <a className="text-blue-600 underline" href="https://pump.fun/BcYHgdDMZ2txWf3EJSZ3dWuLSuFwEQ9PtMW6SLnLCVwB">here</a>.
+          <a className="text-blue-600 underline" href="">here</a>.
           &nbsp;Megainfluencer Luke "Belmar" EXPOSED. Read more&nbsp;
-          <a className="text-blue-600 underline" href="https://pump.fun/BcYHgdDMZ2txWf3EJSZ3dWuLSuFwEQ9PtMW6SLnLCVwB">here</a>.
+          <a className="text-blue-600 underline" href="">here</a>.
           &nbsp;
         </div>
       </Marquee>
@@ -61,7 +61,7 @@ function App() {
           <div className='flex justify-center'>
             <div className='absolute bottom-[15%] grid content-center z-40'>
               <a
-                href="https://pump.fun/BcYHgdDMZ2txWf3EJSZ3dWuLSuFwEQ9PtMW6SLnLCVwB"
+                href=""
                 className='font-extrabold text-5xl md:text-6xl lg:text-7xl bg-red-600 p-6 border-2 border-black hover:scale-105 transition ease-in-out duration-200'
               >
                 BUY
