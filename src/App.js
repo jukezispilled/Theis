@@ -8,7 +8,7 @@ import DT from './dextools.svg';
 import './App.css';
 import TweetButton from './TweetButton';
 import Marquee from "react-fast-marquee";
-import theis3 from './theis3.png'; // Import theis3 image
+import theis3 from './Theis5.png'; // Import theis3 image
 import theis4 from './theis4.png'; // Import theis4 image
 
 function App() {
