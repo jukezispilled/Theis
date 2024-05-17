@@ -39,14 +39,14 @@ function App() {
 
   return (
     <div>
-      <Marquee speed={200}>
-        <div className='h-16 flex items-center text-[20px] lg:text-3xl font-semibold whitespace-nowrap border-y-2 border-black'>
+      <Marquee speed={150}>
+        <div className='h-16 flex items-center text-[20px] lg:text-4xl font-semibold whitespace-nowrap border-y-2 border-black'>
           Megainfluencer Luke "Belmar" EXPOSED. Read more&nbsp;
-          <a className="text-blue-600 underline" href="">here</a>
+          <a className="text-blue-600 underline" href="">here</a>.
           &nbsp;Megainfluencer Luke "Belmar" EXPOSED. Read more&nbsp;
-          <a className="text-blue-600 underline" href="">here</a>
+          <a className="text-blue-600 underline" href="">here</a>.
           &nbsp;Megainfluencer Luke "Belmar" EXPOSED. Read more&nbsp;
-          <a className="text-blue-600 underline" href="">here</a>
+          <a className="text-blue-600 underline" href="">here</a>.
           &nbsp;
         </div>
       </Marquee>
