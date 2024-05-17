@@ -64,7 +64,7 @@ function App() {
                 href="https://www.dextools.io/app/en/solana/pair-explorer/7y3KMHA91JEBoQ67P3mEJtVvXLg62FjWR1VDHhEFSX8Z?t=1715720852830"
                 className='font-bold text-4xl md:text-5xl lg:text-6xl bg-red-600 p-6 border-2 border-black hover:scale-105 transition ease-in-out duration-200'
               >
-                BUY NOW
+                BUY
               </a>
               <div className='pt-8 text-center font-custom text-2xl flex justify-center -mt-3'>
                 <a href="https://twitter.com/theiscoin" className='p-2 hover:scale-110 transition ease-in-out duration-200'>
