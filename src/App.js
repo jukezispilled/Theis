@@ -62,7 +62,7 @@ function App() {
             <div className='absolute bottom-[15%] grid content-center z-40'>
               <a
                 href="https://www.dextools.io/app/en/solana/pair-explorer/7y3KMHA91JEBoQ67P3mEJtVvXLg62FjWR1VDHhEFSX8Z?t=1715720852830"
-                className='font-bold text-4xl md:text-5xl lg:text-6xl bg-red-600 p-6 border-2 border-black hover:scale-105 transition ease-in-out duration-200'
+                className='font-extrabold text-5xl md:text-6xl lg:text-7xl bg-red-600 p-6 border-2 border-black hover:scale-105 transition ease-in-out duration-200'
               >
                 BUY
               </a>
